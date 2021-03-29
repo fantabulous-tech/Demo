@@ -1,9 +1,10 @@
-﻿using UniRx.Async;
+﻿using JetBrains.Annotations;
+using UniRx.Async;
 
 namespace Naninovel.Commands {
-    [CommandAlias("inkChoice")]
+    [CommandAlias("inkChoice"), UsedImplicitly]
     public class InkChoiceCommand : Command {
-        [ParameterAlias(NamelessParameterAlias)]
+        [ParameterAlias(NamelessParameterAlias), UsedImplicitly]
         public IntegerParameter ChoiceIndex;
 
         public override UniTask ExecuteAsync(CancellationToken cancellationToken = default) {
